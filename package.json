@@ -2,6 +2,10 @@
     "name": "tfac",
     "displayName": "tensorflow auto complete",
     "description": "auto complete for tensorslow in python files",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/The-hyphen-user/tfac"
+    },
     "icon":"icon.png",
     "version": "0.0.1",
     "engines": {
