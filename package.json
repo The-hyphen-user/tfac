@@ -1,0 +1,21 @@
+{
+    "name": "tfac",
+    "displayName": "tensorflow auto complete",
+    "description": "auto complete for tensorslow in python files",
+    "icon":"icon.png",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.62.0"
+    },
+    "categories": [
+        "Snippets"
+    ],
+    "contributes": {
+        "snippets": [
+            {
+                "language": "python",
+                "path": "./snippets/snippets.code-snippets"
+            }
+        ]
+    }
+}

@@ -1,0 +1,29 @@
+{
+    "Basic convolutional nueral network":{
+        "prefix": "!cnn",
+        "body": [
+            "train_images = ${1:title}",
+            "train_labels = ",
+            "test_images = ",
+            "test_labels = ",
+            "output_nodes = ",
+            "$0",
+            "cnn_model = tf.keras.Sequential([",
+            "tf.keras.layers.Conv2D(filters=32, kernel_size=(3, 3), activation='relu'), ",
+            "tf.keras.layers.MaxPool2D(pool_size=(2, 2), strides=1),",
+            "tf.keras.layers.Conv2D(filters=128, kernel_size=(3, 3), activation='relu'),",
+            "tf.keras.layers.MaxPool2D(pool_size=(2, 2), strides=1),",
+            "tf.keras.layers.Flatten(),",
+            "tf.keras.layers.Dense(128, activation='relu'),",
+            "tf.keras.layers.Dense(output_nodes, activation='softmax')",
+            "])",
+            "print(cnn_model.summary())",
+            "cnn_model.compile(optimizer=tf.keras.optimizers.SGD(learning_rate=0.01), loss='sparse_categorical_crossentropy', metrics=['accuracy'])",
+            "cnn_model.fit(train_images, train_labels, 32, 5)",
+            "test_loss, test_acc = model.evaluate(test_images, test_labels)",
+            "print('Test accuracy:', test_acc)"
+        ],
+        "description": "basic cnn with 2 conv2, 2 max pool, a basic dence and a softmax"
+    }
+
+}
