@@ -1,15 +1,23 @@
 # tfac README
 
-Basic auto complete with some starter models
+Basic auto complete for tensorflow2 in vscode in python3
+also has some code snippets 
+
 
 ## Features
 
 
-auto complete some tensorflow stuff great for learning
-code snippet for basic neural networks(standard and minimal)
+auto complete basic tensorflow functions and classes. great for learning
+code snippet for basic neural networks(minimal and standard)
 
 
 > Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+
+examples of code snippets:
+
+`!cnn` - basic convolutional neural networks
+
+
 
 ## Requirements
 

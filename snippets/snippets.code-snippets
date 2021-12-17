@@ -1,8 +1,8 @@
 {
-    "Basic convolutional nueral network":{
+    "convolutional nueral network":{
         "prefix": "!cnn",
         "body": [
-            "train_images = ${1:title}",
+            "train_images = ${1}",
             "train_labels = ",
             "test_images = ",
             "test_labels = ",
@@ -24,6 +24,126 @@
             "print('Test accuracy:', test_acc)"
         ],
         "description": "basic cnn with 2 conv2, 2 max pool, a basic dence and a softmax"
+    },
+    "Dence layer":{
+        "prefix": "!Dense",
+        "body": [
+            "tf.keras.layers.Dense($1, activation='relu')"
+        ]
+    },
+    "Conv2D layer":{
+        "prefix": "!Conv2D",
+        "body": [
+            "tf.keras.layers.Conv2D(filters=$1, kernel_size=(3, 3), activation='relu')"
+        ]
+    },
+    "MaxPool2D layer":{
+        "prefix": "MaxPool2D",
+        "body": [
+            "tf.keras.layers.MaxPool2D(pool_size=(${1:2}, 2), strides=1),"
+        ]
+    },
+    "keras":{
+        "prefix": ".keras",
+        "body": [
+            ".keras"
+        ]
+    },
+    "layers":{
+        "prefix": ".layers",
+        "body": ".layers"
+    },
+    "optimizers":{
+        "prefix": ".optimizers",
+        "body": [
+            ".optimizers"
+        ]
+    },
+    "Dense layer":{
+        "prefix": ".Dense",
+        "body": [
+            ".Dense($1, activation='relu')",
+        ]
+    },
+    "Conv2D layer":{
+        "prefix": ".Conv2D",
+        "body": [
+            ".Conv2D(filters=$1, kernel_size=(3, 3), activation='relu')"
+        ]
+    },
+    "Conv2D layer":{
+        "prefix": ".Conv2D",
+        "body": [
+            ".Conv2D(filters=$1, kernel_size=(3, 3), activation='relu')"
+        ]
+    },
+    "Conv2D layer":{
+        "prefix": ".Conv2D",
+        "body": [
+            ".Conv2D(filters=$1, kernel_size=(3, 3), activation='relu')"
+        ]
+    },
+    "MaxPool2D layer":{
+        "prefix": ".MaxPool2D",
+        "body": [
+            ".MaxPool2D(pool_size=(${1:2}, 2), strides=1)"
+        ]
+    },
+    "Flatten layer":{
+        "prefix": ".Flatten",
+        "body": [
+            ".Flatten()"
+        ]
+    },
+    "call model":{
+        "prefix":".call",
+        "body": [
+            ".call($1)"
+        ]
+    },
+    "compile model":{
+        "prefix":".compile",
+        "body": [
+            ".compile(tf.keras.optimizers.Adam(learning_rate=${1:1e-3})),",
+            ", loss='sparse_categorical_crossentropy',",
+            " metrics=['accuracy'],",
+        ]
+    },
+    "evaluate model":{
+        "prefix":".evaluate",
+        "body": [
+            ".evaluate(x=$1, y=)"
+        ]
+    },
+    "train model":{
+        "prefix":".fit",
+        "body": [
+            ".fit(x=$1 , y=, batch_size= , epochs= )"
+            
+        ]
+    },
+    "save model":{
+        "prefix":".save",
+        "body": [
+            ".save('${1:filename}' , include_optimizer=True)"
+        ]
+    },
+    "save model weights":{
+        "prefix":".save_weights",
+        "body": [
+            ".save_weights('${1:filename}')"
+        ]
+    },
+    "summary model":{
+        "prefix":".summary",
+        "body": [
+            ".summary()"
+        ]
+    },
+    "model.":{
+        "prefix":"model.",
+        "body": [
+            ""
+        ]
     }
-
 }
