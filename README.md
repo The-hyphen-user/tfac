@@ -1,6 +1,6 @@
 # tfac README
 
-Basic auto complete for tensorflow2 in vscode in python3
+Basic auto complete extension for tensorflow2 in vscode in python3
 also has some code snippets 
 
 
